@@ -1,23 +1,17 @@
 import textwrap
-
-def printing(index):
-
-    to_be_printed = string[last_index:index]
-    print(to_be_printed)
-    last_index = index
-
-
-
+    
 def wrap(string, max_width):
-    counter = 0
-    for index in range(len(string)):
-        # new line \n every max_width ex:4 steps
-        counter += 1
-        if counter == 4:
-            printing(index)
-            counter = 0
+    result = ""
 
-    return
+    for index in range(0, len(string),max_width): # Iterate over every $max_width elements
+        step_elements = [] # reseting every step
+
+        for elem in string[index:index+max_width]:
+            step_elements.append(str(elem))
+        
+        result += "".join(step_elements) + "\n"
+
+    return result
 
 if __name__ == '__main__':
     string, max_width = input(), int(input())
