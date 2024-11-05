@@ -1,10 +1,20 @@
-# qA2
-s = "qA2"
-validation_list = []
+def solve(s):    
+    result = []
+    for letter in range(len(s)):
+        if s[letter - 1] == " " or letter == 0:
+            result.append(s[letter].upper())
+        else: 
+            result.append(s[letter])
 
-for letter in s:
-    validation_list.append(letter.isdigit())
-if True in validation_list:
-    print(True)
-else: print(False)
-validation_list.clear()
+
+
+
+    final_result = "".join(result)
+        
+
+    return final_result
+
+
+s = "132 456 Wq  m e"
+result1 = solve(s)
+print(result1)
