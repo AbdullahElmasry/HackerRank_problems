@@ -1,1 +1,1 @@
-This is HackerRank problems solved by for fun.
+These are HackerRank problems I've solved for fun.
