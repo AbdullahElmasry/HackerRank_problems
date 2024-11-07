@@ -20,9 +20,8 @@ def merge_the_tools(string, k):
     print(separated)
 # separated = [['A', 'A', 'B'], ['C', 'A', 'A'], ['A', 'D', 'A']]
     for part in separated:
-        cp_part = part.sort()
         for i in range(len(part)):
-            if cp_part[i] != cp_part[i-1] or i == 0: 
+            if part[i] != part[i-1]: 
                 result.append(part[i])
     
     
