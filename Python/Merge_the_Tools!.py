@@ -17,20 +17,25 @@ def merge_the_tools(string, k):
         if (i+1) % k == 0:
             separated.append(temp[:]) # we save copy of tmep bc of dear python is not saving a copy of the values, it instead save them by refrence, that's mean that if we edit the source the others will be affected
             temp.clear()
-    print(separated)
+    # print(separated)
 # separated = [['A', 'A', 'B'], ['C', 'A', 'A'], ['A', 'D', 'A']]
     for part in separated:
         for i in range(len(part)):
-            if part[i] != part[i-1]: 
+            if part[i] != part[i-1]:
                 result.append(part[i])
     
     
-    print(result)
-            
+    # print(result)
+    # result = ['A', 'B', 'C', 'A', 'D', 'A'] 
+    final_string = ""
+    step = int(len(result)/3) # step = 6/3 = 2
 
-    # print(f"this is the result: {result}")
-
+    for i in range(0, len(result), step): # 0, 2, 4
+            final_string += ''.join(result[i:i + step]) + "\n"
         
+    print(f"\n{final_string}")
+
+
 
 s = "AABCAAADA"
 k = 3
